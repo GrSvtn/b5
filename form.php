@@ -119,6 +119,18 @@ if (!empty($messages['success'])){
         <label class="form-label">
             Сверхспособности:
             <select name="field-power[]" class="form-control" multiple="multiple" required>
+                <?php
+                foreach ($abilities as $ability){
+                    $selected = empty($values['powers'][$ability['power']]) ? '' : 'selected';
+                    printf('<option value="%s" %s>%s</option>', $ability['power'], $selected, $ability['power']);
+                }
+                ?>
+            </select>
+        </label><br>
+        
+        <label class="form-label">
+            Сверхспособности:
+            <select name="field-power[]" class="form-control" multiple="multiple" required>
                 <option value="Immortality" <?php if (!empty($values['powers']['Immortality'])) print 'selected'; ?>>
                     Бессмертие
                 </option>

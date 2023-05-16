@@ -127,22 +127,6 @@ if (!empty($messages['success'])){
                 ?>
             </select>
         </label><br>
-        
-        <label class="form-label">
-            Сверхспособности:
-            <select name="field-power[]" class="form-control" multiple="multiple" required>
-                <option value="Immortality" <?php if (!empty($values['powers']['Immortality'])) print 'selected'; ?>>
-                    Бессмертие
-                </option>
-                <option value="Levitation" <?php if (!empty($values['powers']['Levitation'])) print 'selected'; ?>>
-                    Левитация
-                </option>
-                <option value="Telepathy" selected="selected">Телепатия</option>
-                <option value="Telekinesis" <?php if (!empty($values['powers']['Telekinesis'])) print 'selected'; ?>>
-                    Телекинез
-                </option>
-            </select>
-        </label><br>
 
         <label class="form-label">
             Биография:
